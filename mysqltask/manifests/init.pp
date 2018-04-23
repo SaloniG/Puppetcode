@@ -9,7 +9,7 @@ class mysqltask {
         $pack = [ 'mysql-server', 'MySQL-python']
         package {$pack:
                 ensure  => installed,
-                require => Exec["repo-install"],
+                require => Exec["repo_install"],
         }
         service {'mysqld':
                 ensure => running,
